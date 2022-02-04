@@ -13,7 +13,7 @@ class ContaSalario:
         return self._codigo == outro._codigo and self._saldo == outro._saldo
 
     def __lt__(self, outro):
-        return self._saldo < outro.saldo
+        return self._saldo < outro._saldo
 
     def depositar(self, valor):
         self._saldo += valor
@@ -32,5 +32,7 @@ conta_do_ita.depositar(2000)
 
 contas = [conta_da_rafa, conta_do_gui, conta_do_ita]
 
-for conta in sorted(contas, key=attrgetter("_saldo")):
-        print(conta)
+print(conta_do_gui > conta_da_rafa)
+
+for conta in sorted(contas):
+    print (conta)
