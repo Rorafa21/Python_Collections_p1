@@ -20,6 +20,3 @@ print(conta_do_gui)
 conta_da_rafa = Contacorrente(47685)
 conta_da_rafa.deposita(1000)
 print(conta_da_rafa)
-
-contas = [conta_da_rafa, conta_do_gui]
-print (contas)
