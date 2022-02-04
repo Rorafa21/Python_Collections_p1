@@ -1,3 +1,4 @@
+from operator import attrgetter
 class ContaSalario:
 
     def __init__(self, codigo):
@@ -20,13 +21,15 @@ conta_do_gui = ContaSalario(17)
 conta_do_gui.depositar (500)
 
 conta_da_rafa = ContaSalario(3)
-conta_da_rafa.depositar(1000)]
+conta_da_rafa.depositar(1000)
 
 conta_do_ita = ContaSalario(8)
 conta_do_ita.depositar(2000)
 
 contas = [conta_da_rafa, conta_do_gui, conta_do_ita]
 
-for conta in contas:
-    print(conta)
-    
+def extrai_saldo(conta):
+        return conta._saldo
+
+for conta in sorted(contas, key=extrai_saldo):
+        print(conta)
