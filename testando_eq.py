@@ -2,7 +2,7 @@ class ContaSalario:
 
     def __init__(self, codigo):
         self._codigo = codigo
-        self._valor = 0
+        self._saldo = 0
 
     def depositar(self, valor):
         self._saldo += valor
