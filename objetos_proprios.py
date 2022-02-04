@@ -30,3 +30,17 @@ rafaelly = ("Rafaelly", 20, 2001)
 #paulo = (21, "Paulo", 2005) - desfaz a ordem.
 #conta_do_gui = (15, 1000) funciona mas não seria possivel alterar valores de forma simples.
 
+usuarios = [guilherme, rafaelly]
+print(usuarios)
+
+usuarios.append(("Paulo", 28, 1979))
+print(usuarios)
+
+conta_do_gui = Contacorrente(15)
+conta_do_gui.deposita(500)
+conta_da_rafa = Contacorrente(47685)
+conta_da_rafa.deposita(1000)
+#Contas sendo tuplas não se muda o valor de dados importantes
+contas = (conta_do_gui, conta_da_rafa)
+for conta in contas:
+    print(conta)
